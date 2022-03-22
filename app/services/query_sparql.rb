@@ -4,6 +4,7 @@ require 'query_log'
 # Proxies SPARQL requests to Neptune
 class QuerySparql
   ALLOWED_KEYS = %i[query update].freeze
+  NEPTUNE_TIMEOUT_SECONDS = 60
 
   class << self
     def call(params)
@@ -23,7 +24,7 @@ class QuerySparql
       response = RestClient::Request.execute(
         method: :post,
         payload: URI.encode_www_form(payload),
-        timeout: nil,
+        timeout: NEPTUNE_TIMEOUT_SECONDS,
         url: uri.to_s
       )
 
@@ -44,6 +45,8 @@ class QuerySparql
 
       OpenStruct.new(result: result, status: response.code)
     rescue RestClient::Exception => e
+      Airbrake.notify(e)
+
       query_log&.fail(e.http_body || e.message)
 
       OpenStruct.new(
@@ -52,7 +55,8 @@ class QuerySparql
       )
     rescue StandardError => e
       query_log&.fail(e.message)
-      raise
+
+      raise e
     end
 
     private
