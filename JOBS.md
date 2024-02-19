@@ -15,13 +15,13 @@ There is a set of jobs that are executed via Cloud66 async jobs section:
 5. Title: "Purge Envelopes"  - Currently disabled, no server allocated
   a. **schedule:** 01:00 AM UTC  
   b. **rake task:** `envelopes:purge`  
-  c. **server:** N/A
+  c. **server:** N/A  
   d. **Job description/purpose:** _Physically deletes envelopes marked as purged_
 
 
 7. Title: "Reindex All"    - Currently disabled, no server allocated
   a. **schedule:** "On demand"  
   b. **rake task:** `search:reindex`  
-  c. **server:** N/A
+  c. **server:** N/A  
   d. **Job description/purpose:** _Reset Index_
 
