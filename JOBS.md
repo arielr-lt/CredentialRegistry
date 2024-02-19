@@ -9,11 +9,11 @@ There is a set of jobs that are executed via Cloud66 async jobs section:
   a. **schedule:** 01:00 AM UTC  
   b. **rake task:** `json_contexts:update`  
   c. **server:** Narwhal  
-3. Title: "Purge Envelopes"  
+3. Title: "Purge Envelopes"  - Currently disabled, no server allocated
   a. **schedule:** 01:00 AM UTC  
   b. **rake task:** `json_contexts:update`  
   c. **server:** Narwhal  
-4. Title: "Reindex All"  
+4. Title: "Reindex All"    - Currently disabled, no server allocated
   a. **schedule:** "On demand"  
   b. **rake task:** `search:reindex`  
   c. **server:** Narwhal  
