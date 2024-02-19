@@ -11,7 +11,7 @@ There is a set of jobs that are executed via Cloud66 async jobs section:
   c. **server:** Narwhal  
 3. "Purge Envelopes"  
   a. **schedule:** 01:00 AM UTC  
-  b. **rake task:** `json_contexts:update`  
+  b. **rake task:** `json_contexts:update`  
   c. **server:** Narwhal  
 4. "Reindex All"  
   a. **schedule:** "On demand"  
