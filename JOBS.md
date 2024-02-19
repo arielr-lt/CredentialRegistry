@@ -22,5 +22,6 @@ There is a set of jobs that are executed via Cloud66 async jobs section:
 7. Title: "Reindex All"    - Currently disabled, no server allocated
   a. **schedule:** "On demand"  
   b. **rake task:** `search:reindex`  
-  c. **server:** N/A  
+  c. **server:** N/A
+  d. **Job description/purpose:** _Reset Index_
 
