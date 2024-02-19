@@ -9,8 +9,8 @@ There is a set of jobs that are executed via Cloud66 async jobs section:
 3. Title: "Update JSON contexts"  
   a. **schedule:** 01:00 AM UTC  
   b. **rake task:** `json_contexts:update`  
-  c. **server:** Narwhal
-d. **Job description/purpose:** _Updates the JSON context specs used for indexing envelope resources_
+  c. **server:** Narwhal  
+  d. **Job description/purpose:** _Updates the JSON context specs used for indexing envelope resources_
 
 5. Title: "Purge Envelopes"  - Currently disabled, no server allocated
   a. **schedule:** 01:00 AM UTC  
